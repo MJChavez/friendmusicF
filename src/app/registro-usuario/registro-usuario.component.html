@@ -1,0 +1,71 @@
+<br>
+<mat-card>
+    <h4>Registro de usuario</h4>
+</mat-card>
+<br>
+<mat-card>
+    <div class="centerTable">
+        <table>
+            <tr>
+                <td>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Nombre</mat-label>
+                        <input [(ngModel)]="usuario.nombre" matInput>
+                    </mat-form-field>
+                </td>
+                <td>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Apellido</mat-label>
+                        <input [(ngModel)]="usuario.apellido" matInput>
+                    </mat-form-field>
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    <mat-form-field appearance="outline">
+                        <mat-label>ID Playstation</mat-label>
+                        <input [(ngModel)]="usuario.idPlaystation" matInput>
+                    </mat-form-field>
+                </td>
+                <td>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Fecha de Nacimiento</mat-label>
+                        <input [(ngModel)]="usuario.fechaNacimiento" matInput [matDatepicker]="picker">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Contraseña</mat-label>
+                        <input [(ngModel)]="usuario.password" matInput type="password">
+                    </mat-form-field>
+                </td>
+                <td>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Repetir Contraseña</mat-label>
+                        <input [(ngModel)]="usuario.repassword" matInput type="password">
+                    </mat-form-field>
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Permisos</mat-label>
+                        <mat-select>
+                            <mat-option value="option">Administrador</mat-option>
+                            <mat-option value="option">Jugador</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </td>
+                <td style="text-align: center;">
+                    <button mat-raised-button color="primary" (click)="registrarUsuario()">Registrar</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</mat-card>

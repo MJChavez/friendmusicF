@@ -1,0 +1,12 @@
+div.centerTable{
+    text-align: center;
+}
+
+div.centerTable table {
+   margin: 0 auto;
+   text-align: left;
+}
+
+mat-form-field{
+    width: 100%;
+}
